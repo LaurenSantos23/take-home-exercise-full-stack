@@ -37,6 +37,7 @@ class NewMember extends Component {
     render() {
       const { firstName, lastName, title, story, favoriteColor, photoUrl } = this.state; 
       return (
+       <Container>   
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
@@ -76,6 +77,7 @@ class NewMember extends Component {
           /> 
           <button type="submit">Submit</button>          
       </form>
+     </Container> 
     );
   }    
 }
