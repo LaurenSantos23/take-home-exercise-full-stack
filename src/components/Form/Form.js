@@ -2,17 +2,17 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import './Form.css';
 
-class NewMember extends Component {
+class Form extends Component {
     constructor() {
         super();
         this.state = {
         //attributes
-          firstName: '';
-          lastName: '';
-          title: '';
-          story: '';
-          favoriteColor:'';
-          photoUrl:'';
+          firstName: '',
+          lastName: '',
+          title: '',
+          story: '',
+          favoriteColor:'',
+          photoUrl:''
         };
     }
 
@@ -28,6 +28,9 @@ class NewMember extends Component {
       // get form data out of state
       const { firstName, lastName, title, story, favoriteColor, photoUrl } = this.state;
 
+      //make sure to match route from what I;m building in the backend
+      //find out how to save the record and display!! (backend to save)
+
       axios.post('/', {firstName, lastName, title, story, favoriteColor, photoUrl})
         .then((result) => {
         //access the results here
@@ -37,7 +40,7 @@ class NewMember extends Component {
     render() {
       const { firstName, lastName, title, story, favoriteColor, photoUrl } = this.state; 
       return (
-       <Container>   
+       <div>   
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
@@ -77,7 +80,7 @@ class NewMember extends Component {
           /> 
           <button type="submit">Submit</button>          
       </form>
-     </Container> 
+     </div> 
     );
   }    
 }

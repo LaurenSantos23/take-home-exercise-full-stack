@@ -50,7 +50,7 @@ class App extends React.Component {
             favoriteColor={member.favoriteColor}
           />
         ))}
-        {/* {< Route path="/:newMember/" exact component={Form} />} */}
+        {/* { {< Route path="/:newMember/" exact component={Form} />} } */}
         <TeamMember id="new" name="Join us!" title="New Teammate" />
       </div>
     );
